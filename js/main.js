@@ -90,8 +90,8 @@ const createPhoto = (_, index) => ({
   )
 });
 
-const allPhotos = Array.from({length: PHOTOS_COUNT}, createPhoto);
+const getPhotos = Array.from({length: PHOTOS_COUNT}, createPhoto);
 
 isCorrectLength(1, 140);
 getRandomPositiveInteger();
-allPhotos();
+getPhotos();
