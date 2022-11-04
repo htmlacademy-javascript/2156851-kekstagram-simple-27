@@ -1,6 +1,5 @@
-import './random-number-creator.js';
-import './length-check.js';
-import './object-creator.js';
+import {getRandomPositiveInteger} from './utils.js';
+import {getRandomArrayElement,  createMessage, creatComment, createPhoto, getPhotos} from './object-creator.js';
 
 const PHOTOS_COUNT = 25;
 const AVATARS_COUNT = 6;
@@ -41,5 +40,7 @@ const NICKNAMES = [
   'Альфред',
 ];
 
-export {PHOTOS_COUNT, AVATARS_COUNT, COMMENTS_COUNT, MESSAGES, DESCRIPTIONS, NICKNAMES};
-
+createMessage();
+creatComment();
+createPhoto();
+getPhotos();

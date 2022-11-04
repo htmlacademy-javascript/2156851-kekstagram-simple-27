@@ -7,3 +7,9 @@ function getRandomPositiveInteger (a, b) {
   const result = Math.random() * (upper - lower + 1) + lower;
   return Math.floor(result);
 }
+
+function checkStringLength (string, length) {
+  return string.length <= length;
+}
+export {getRandomPositiveInteger}
+

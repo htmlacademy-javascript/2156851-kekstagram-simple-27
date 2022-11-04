@@ -1,20 +1,4 @@
-import {PHOTOS_COUNT, AVATARS_COUNT, COMMENTS_COUNT, MESSAGES, DESCRIPTIONS, NICKNAMES} from './main.js'
-
-function getRandomPositiveInteger (a, b) {
-  if (a < 0 || b < 0) {
-    return NaN;
-  }
-  const lower = Math.ceil(Math.min(a, b));
-  const upper = Math.floor(Math.max(a, b));
-  const result = Math.random() * (upper - lower + 1) + lower;
-  return Math.floor(result);
-}
-
-function isCorrectLength (string, length) {
-  return string.length <= length;
-}
-
-
+import {getRandomPositiveInteger} from './utils.js'
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
 const createMessage = () => {
@@ -39,10 +23,5 @@ const createPhoto = (_, index) => ({
 });
 
 const getPhotos = Array.from({length: PHOTOS_COUNT}, createPhoto);
-
-isCorrectLength(1, 140);
-getRandomPositiveInteger();
-getPhotos();
-
-
+export {getRandomArrayElement, createMessage, creatComment, createPhoto, getPhotos}
 
