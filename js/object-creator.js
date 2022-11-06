@@ -1,4 +1,5 @@
 import {getRandomPositiveInteger} from './utils.js'
+import {PHOTOS_COUNT, AVATARS_COUNT, COMMENTS_COUNT, LikesCount, MESSAGES, DESCRIPTIONS, NICKNAMES} from './costants.js';
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
 const createMessage = () => {
@@ -23,5 +24,4 @@ const createPhoto = (_, index) => ({
 });
 
 const getPhotos = Array.from({length: PHOTOS_COUNT}, createPhoto);
-export {getRandomArrayElement, createMessage, creatComment, createPhoto, getPhotos}
-
+export {getRandomArrayElement}
