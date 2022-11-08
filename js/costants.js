@@ -1,3 +1,4 @@
+import { getRandomPositiveInteger } from "./utils";
 const PHOTOS_COUNT = 25;
 const AVATARS_COUNT = 6;
 const COMMENTS_COUNT = getRandomPositiveInteger(1, 10);
@@ -36,5 +37,4 @@ const NICKNAMES = [
   'Робин',
   'Альфред',
 ];
-export {PHOTOS_COUNT, AVATARS_COUNT, COMMENTS_COUNT, LikesCount, MESSAGES, DESCRIPTIONS, NICKNAMES}
 
