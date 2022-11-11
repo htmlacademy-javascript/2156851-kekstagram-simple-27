@@ -6,7 +6,6 @@ const pictureTemplate = document.querySelector('#picture').content.querySelector
 const randomUserPictures = getPhotos();
 
 const pictureFragment = document.createDocumentFragment();
-
 randomUserPictures.forEach((picture) => {
   const {url, comments, likes} = picture;
   const pictureElement = pictureTemplate.cloneNode(true);
