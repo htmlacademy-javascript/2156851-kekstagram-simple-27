@@ -1,5 +1,5 @@
 import {getPhotos} from './object-creator.js';
-
+const makePicture = () => {
 const userPictures = document.querySelector('.pictures');
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
@@ -16,3 +16,5 @@ randomUserPictures.forEach((picture) => {
 });
 
 userPictures.appendChild(pictureFragment);
+ };
+export {makePicture};

@@ -1,3 +1,6 @@
 import {getPhotos} from './object-creator.js';
-import './pictures.js';
+import {makePicture} from'./pictures.js';
+makePicture();
 getPhotos();
+
+
