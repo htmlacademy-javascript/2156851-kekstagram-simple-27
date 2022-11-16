@@ -20,7 +20,7 @@
       <section class="img-upload">
         <div class="img-upload__wrapper">
           <h2 class="img-upload__title  visually-hidden">Загрузка фотографии</h2>
-          <form class="img-upload__form" id="upload-select-image" method="post" enctype="multipart/form-data" autocomplete="off">
+          <form class="img-upload__form" id="upload-select-image" method="post" action="https://27.javascript.pages.academy/kekstagram" enctype="multipart/form-data" autocomplete="off">
 
             <!-- Изначальное состояние поля для загрузки изображения -->
             <fieldset class="img-upload__start">
@@ -31,6 +31,7 @@
             <!-- Форма редактирования изображения -->
             <div class="img-upload__overlay  hidden">
               <div class="img-upload__wrapper">
+                 <form class="img-upload__form" id="upload-select-image" method="post" action="https://27.javascript.pages.academy/kekstagram" enctype="multipart/form-data" autocomplete="off">
                 <div class="img-upload__preview-container">
 
                   <!-- Изменение размера изображения -->
@@ -105,7 +106,9 @@
 
                 <!-- Добавление комментария к изображению -->
                 <fieldset class="img-upload__text text">
-                    <textarea class="text__description" name="description" placeholder="Ваш комментарий..."></textarea>
+                  <textarea class="text__description" name="description" maxlength = "140"
+                  data-pristine-maxlength-message = "Максимальная длина 140 символов"
+                   placeholder="Ваш комментарий..."></textarea>
                 </fieldset>
 
                 <!-- Кнопка для отправки данных на сервер -->
@@ -164,6 +167,7 @@
       </div>
     </section>
   </template>
+<script src = "/vendor/pristine/pristine.min.js"></script>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
