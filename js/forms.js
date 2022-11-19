@@ -1,5 +1,5 @@
 import { resetScale } from './scale.js';
-import { resetEffects } from './effect.js';
+import { resetEffects } from './effects';
 const closeButton = document.querySelector('#upload-cancel');
 const body = document.querySelector('body');
 const modal = document.querySelector('.img-upload__overlay');
