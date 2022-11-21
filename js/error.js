@@ -1,4 +1,4 @@
-import {isEcsEvt} from './util.js';
+import {isEcsEvt} from './utils.js';
 
 const GET_ERROR_TEXT = 'Ошибка при загрузке данных';
 const POST_ERROR_TEXT = 'Ошибка размещения фотогрфаии';

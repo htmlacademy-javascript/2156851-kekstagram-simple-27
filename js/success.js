@@ -1,4 +1,4 @@
-import {isEcsEvt} from './util.js';
+import {isEcsEvt} from './utils.js';
 
 const successTemplate = document.querySelector('#success').content.querySelector('.success');
 
