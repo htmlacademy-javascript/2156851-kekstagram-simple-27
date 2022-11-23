@@ -1,7 +1,7 @@
-import { getRandomPositiveInteger } from './utils.js';
+
 const PHOTOS_COUNT = 25;
 const AVATARS_COUNT = 6;
-const COMMENTS_COUNT = getRandomPositiveInteger(1, 10);
+const COMMENTS_COUNT = (1, 10);
 
 const LikesCount = {
   MIN: 15,

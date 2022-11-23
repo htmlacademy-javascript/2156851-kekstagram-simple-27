@@ -73,7 +73,6 @@ form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const isValid = pristine.validate();
   if (isValid) {
-    // eslint-disable-next-line no-console
     sendData(renderSuccessMessage, renderPostErrorMessage, new FormData(form));
   }
 });
