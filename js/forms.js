@@ -1,5 +1,8 @@
 import { resetScale } from './scale.js';
-import { resetEffects } from './effects';
+import { resetEffects } from './effects.js';
+import { sendData } from './api.js';
+import { renderSuccessMessage } from './success.js';
+import { renderPostErrorMessage } from './error.js';
 const closeButton = document.querySelector('#upload-cancel');
 const body = document.querySelector('body');
 const modal = document.querySelector('.img-upload__overlay');
@@ -11,10 +14,10 @@ const commentField = document.querySelector('.text__description');
 const MAX_HASH_TAG_NUMBER = 5;
 const VALID_SYMBOLS = /^#[a-zа-яё0-9]{1,19}$/i;
 
-const pristine = new Pristine (form, {
+const pristine = new Pristine(form, {
   classTo: 'img-upload__field-wrapper',
-  errorTextParent:'img-upload__field-wrapper',
-  errorTextClass:'img-upload__field-wrapper_error',
+  errorTextParent: 'img-upload__field-wrapper',
+  errorTextClass: 'img-upload__field-wrapper_error',
 });
 
 
@@ -34,9 +37,9 @@ const closeModal = () => {
 };
 const isTextFieldFocused = () =>
   document.activeElement === hashTagsField ||
-document.activeElement === commentField;
+  document.activeElement === commentField;
 
-function onEscKeyDown (evt) {
+function onEscKeyDown(evt) {
   if (evt.key === 'Escape' && !isTextFieldFocused()) {
     evt.preventDefault();
     closeModal();
@@ -71,6 +74,6 @@ form.addEventListener('submit', (evt) => {
   const isValid = pristine.validate();
   if (isValid) {
     // eslint-disable-next-line no-console
-    console.log('Форма отправлена');
+    sendData(renderSuccessMessage, renderPostErrorMessage, new FormData(form));
   }
 });

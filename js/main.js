@@ -1,4 +1,5 @@
-import {getPhotos} from './object-creator.js';
-import {renderPictures} from'./pictures.js';
+import { renderPictures } from './pictures.js';
 import './forms.js';
-renderPictures(getPhotos());
+import { getData, sendData } from './api.js';
+import { renderGetErrorMessage } from './error.js';
+getData((data) => { renderPictures(data) }, renderGetErrorMessage);
